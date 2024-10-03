@@ -1,3 +1,54 @@
-body{
+*{
     background-color:black;
 }
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin-left: 17px ;/* Align items to the start of the parent container */
+  }
+  
+  ul li {
+    display: inline-block; /* Only take the width of the content */
+  }
+  
+  ul li a {
+    display: inline-block; /* Apply the same to the links */
+    text-align: center;/* Example background color */
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+  }
+ 
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-width: 1366px; /* Use flexbox for layout *//* Full height of the viewport */
+  }
+  
+  .sidebar {
+    width: 100px; /* Width of the sidebar */
+    color: white; /* Text color in sidebar */
+    padding: 10px; /* Padding inside sidebar */
+    position: fixed; /* Keep sidebar fixed */
+    overflow-y: auto; /* Enable scrolling if needed */
+  }
+  
+  .content {
+  /* Padding for content area */
+    flex-grow: 1; /* Allow content to take remaining space */
+    overflow-y: auto; /* Enable vertical scrolling for content */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-left: -395px;
+  }
+  
+  .hovered {
+   background-color: white;
+   color: black;
+  }
+  

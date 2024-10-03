@@ -1,47 +1,70 @@
-<div class="Container ">
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark m-3">
-    <!-- Container wrapper -->
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-      <!-- Navbar brand -->
-      <a class="navbar-brand fs-1" href="#">Devally</a>
-
-      <!-- Toggle button -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-mdb-toggle="collapse"
-        data-mdb-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-
-      <!-- Collapsible wrapper -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- Left links -->
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item m-3 ">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item m-3">
-            <a class="nav-link active" aria-current="page" href="#">About</a>
-          </li>
-          <li class="nav-item m-3">
-            <a class="nav-link active" aria-current="page" href="#">Contact</a>
-          </li>
-        </ul>
-        <!-- Left links -->
-      </div>
-      <!-- Collapsible wrapper -->
+      <a class="navbar-brand fs-1" routerLink="/">Devally</a>
     </div>
-    <!-- Container wrapper -->
   </nav>
-  <!-- Navbar -->
-  <ul class="">
-    <li class="list-group-item"><i class="fa-solid fa-house fa-2x" style="color: white;"></i></li>
-    <li class="list-group-item mt-5"><i class="fa-solid fa-address-book fa-2x" style="color: white;"></i></li>
-  </ul>
+  <div class="d-flex">
+    <ul class="sidebar">
+      <li class="list-group-item">
+        <a class="nav-link active" 
+           routerLink="/home" 
+           (mouseenter)="setHover('home')" 
+           (mouseleave)="clearHover()"
+           [ngClass]="{'hovered': hoveredIcon === 'home'}">
+          <i class="fa-solid fa-house fa-2x" style="color: white;"></i>
+        </a>
+      </li>
+      <li class="list-group-item mt-4">
+        <a class="nav-link active" 
+           routerLink="/about" 
+           (mouseenter)="setHover('about')" 
+           (mouseleave)="clearHover()"
+           [ngClass]="{'hovered': hoveredIcon === 'about'}">
+          <i class="fa-regular fa-address-card fa-2x" style="color: white;"></i>
+        </a>
+      </li>
+      <li class="list-group-item mt-4">
+        <a class="nav-link active" 
+           routerLink="/project" 
+           (mouseenter)="setHover('project')" 
+           (mouseleave)="clearHover()"
+           [ngClass]="{'hovered': hoveredIcon === 'project'}">
+          <i class="fa-solid fa-laptop-file fa-2x" style="color: white;"></i>
+        </a>
+      </li>
+      <li class="list-group-item mt-4">
+        <a class="nav-link active" 
+           routerLink="/team" 
+           (mouseenter)="setHover('team')" 
+           (mouseleave)="clearHover()"
+           [ngClass]="{'hovered': hoveredIcon === 'team'}">
+          <i class="fa-solid fa-people-group fa-2x" style="color: white;"></i>
+        </a>
+      </li>
+      <li class="list-group-item mt-4">
+        <a class="nav-link active" 
+           routerLink="/services" 
+           (mouseenter)="setHover('services')" 
+           (mouseleave)="clearHover()"
+           [ngClass]="{'hovered': hoveredIcon === 'services'}">
+          <i class="fa-sharp fa-regular fa-clipboard-list fa-2x" style="color: white;"></i>
+        </a>
+      </li>
+      <li class="list-group-item mt-4">
+        <a class="nav-link active" 
+           routerLink="/contact" 
+           (mouseenter)="setHover('contact')" 
+           (mouseleave)="clearHover()"
+           [ngClass]="{'hovered': hoveredIcon === 'contact'}">
+          <i class="fa-solid fa-address-book fa-2x" style="color: white;"></i>
+        </a>
+      </li>
+    </ul>
+    <div class="content">
+      <router-outlet></router-outlet>
+      <app-landing-page></app-landing-page>
+      
+    </div>
+  </div>
 </div>

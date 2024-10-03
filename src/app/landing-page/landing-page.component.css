@@ -1,0 +1,26 @@
+.video-background {
+    position: relative;
+    
+    height: 86.6vh; /* Full height */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   
+   
+    height: auto;
+    z-index: -1; /* Send video to the back */
+    transform: translate(-50%, -50%); /* Center the video */
+  }
+  
+  .overlay {
+    position: relative; /* Position overlay */
+    z-index: 1; /* Bring overlay content to the front */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add some padding */
+  }
+  
