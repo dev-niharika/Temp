@@ -1,3 +1,22 @@
-h1{
-    color: white;
+body {
+    font-family: 'Arial', sans-serif;
+   
+}
+
+h1 {
+    color: #ffffff;
+}
+
+.text-warning {
+    color: #ffdf00 !important;
+}
+
+.main{
+    margin-left: 600px;
+    margin-top:-80px ;
+}
+
+.adjust{
+    margin: -5px;
+
 }

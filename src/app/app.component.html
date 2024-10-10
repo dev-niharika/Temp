@@ -1,69 +1,110 @@
-<div class="container">
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="">
-      <a class="navbar-brand fs-1" routerLink="/">Devally</a>
+<div class="container ">
+
+    <div style="width: 156px;">
+      <a class="navbar-brand fs-1 text-white" routerLink="/">Devally</a>
     </div>
-  </nav>
+ 
   <div class="d-flex">
     <ul class="sidebar">
       <li class="list-group-item">
-        <a class="nav-link active" 
-           routerLink="/home" 
-           (mouseenter)="setHover('home')" 
-           (mouseleave)="clearHover()"
-           [ngClass]="{'hovered': hoveredIcon === 'home'}">
-          <i class="fa-solid fa-house fa-2x" style="color: white;"></i>
+        <a
+          class="nav-link active"
+          routerLink="/home"
+          (mouseenter)="setHover('home')"
+          (mouseleave)="clearHover()"
+          [ngClass]="{ hovered: hoveredIcon === 'home' }"
+        >
+          <i
+            class="fa-solid fa-house hover-underline-animation"
+            [attr.data-content]="
+              hoveredIcon === 'home' ? getHoverContent() : ''
+            "
+          ></i>
         </a>
       </li>
       <li class="list-group-item mt-4">
-        <a class="nav-link active" 
-           routerLink="/about" 
-           (mouseenter)="setHover('about')" 
-           (mouseleave)="clearHover()"
-           [ngClass]="{'hovered': hoveredIcon === 'about'}">
-          <i class="fa-regular fa-address-card fa-2x" style="color: white;"></i>
+        <a
+          class="nav-link active"
+          routerLink="/about"
+          (mouseenter)="setHover('about')"
+          (mouseleave)="clearHover()"
+          [ngClass]="{ hovered: hoveredIcon === 'about' }"
+        >
+          <i
+            class="fa-regular fa-address-card hover-underline-animation"
+            [attr.data-content]="
+              hoveredIcon === 'about' ? getHoverContent() : ''
+            "
+          ></i>
         </a>
       </li>
       <li class="list-group-item mt-4">
-        <a class="nav-link active" 
-           routerLink="/project" 
-           (mouseenter)="setHover('project')" 
-           (mouseleave)="clearHover()"
-           [ngClass]="{'hovered': hoveredIcon === 'project'}">
-          <i class="fa-solid fa-laptop-file fa-2x" style="color: white;"></i>
+        <a
+          class="nav-link active"
+          routerLink="/project"
+          (mouseenter)="setHover('project')"
+          (mouseleave)="clearHover()"
+          [ngClass]="{ hovered: hoveredIcon === 'project' }"
+        >
+          <i
+            class="fa-solid fa-laptop-file hover-underline-animation"
+            [attr.data-content]="
+              hoveredIcon === 'project' ? getHoverContent() : ''
+            "
+          ></i>
         </a>
       </li>
       <li class="list-group-item mt-4">
-        <a class="nav-link active" 
-           routerLink="/team" 
-           (mouseenter)="setHover('team')" 
-           (mouseleave)="clearHover()"
-           [ngClass]="{'hovered': hoveredIcon === 'team'}">
-          <i class="fa-solid fa-people-group fa-2x" style="color: white;"></i>
+        <a
+          class="nav-link active"
+          routerLink="/team"
+          (mouseenter)="setHover('team')"
+          (mouseleave)="clearHover()"
+          [ngClass]="{ hovered: hoveredIcon === 'team' }"
+        >
+          <i
+            class="fa-solid fa-people-group hover-underline-animation"
+            [attr.data-content]="
+              hoveredIcon === 'team' ? getHoverContent() : ''
+            "
+          ></i>
         </a>
       </li>
       <li class="list-group-item mt-4">
-        <a class="nav-link active" 
-           routerLink="/services" 
-           (mouseenter)="setHover('services')" 
-           (mouseleave)="clearHover()"
-           [ngClass]="{'hovered': hoveredIcon === 'services'}">
-          <i class="fa-sharp fa-regular fa-clipboard-list fa-2x" style="color: white;"></i>
+        <a
+          class="nav-link active"
+          routerLink="/services"
+          (mouseenter)="setHover('services')"
+          (mouseleave)="clearHover()"
+          [ngClass]="{ hovered: hoveredIcon === 'services' }"
+        >
+          <i
+            class="fa-sharp fa-regular fa-clipboard-list hover-underline-animation"
+            [attr.data-content]="
+              hoveredIcon === 'services' ? getHoverContent() : ''
+            "
+          ></i>
         </a>
       </li>
       <li class="list-group-item mt-4">
-        <a class="nav-link active" 
-           routerLink="/contact" 
-           (mouseenter)="setHover('contact')" 
-           (mouseleave)="clearHover()"
-           [ngClass]="{'hovered': hoveredIcon === 'contact'}">
-          <i class="fa-solid fa-address-book fa-2x" style="color: white;"></i>
+        <a
+          class="nav-link active"
+          routerLink="/contact"
+          (mouseenter)="setHover('contact')"
+          (mouseleave)="clearHover()"
+          [ngClass]="{ hovered: hoveredIcon === 'contact' }"
+        >
+          <i
+            class="fa-solid fa-address-book hover-underline-animation"
+            [attr.data-content]="
+              hoveredIcon === 'contact' ? getHoverContent() : ''
+            "
+          ></i>
         </a>
       </li>
     </ul>
     <div class="content">
       <router-outlet></router-outlet>
-      <app-landing-page></app-landing-page>
       
     </div>
   </div>

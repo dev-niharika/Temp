@@ -1,5 +1,6 @@
 *{
     background-color:rgba(0, 0, 0, 0);
+    margin: 0;
 }
 
 ul {
@@ -8,7 +9,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
-    margin-left: 17px ;/* Align items to the start of the parent container */
+    margin-left: 20px ;/* Align items to the start of the parent container */
   }
   
   ul li {
@@ -24,13 +25,15 @@ ul {
   }
  
   .container {
+    padding: 20px;
     display: flex;
     flex-direction: column;
+    background-color: black;
     min-width: 1366px; /* Use flexbox for layout *//* Full height of the viewport */
   }
   
   .sidebar {
-    width: 100px; /* Width of the sidebar */
+    width: 250px; /* Width of the sidebar */
     color: white; /* Text color in sidebar */
     padding: 10px; /* Padding inside sidebar */
     position: fixed; /* Keep sidebar fixed */
@@ -51,4 +54,39 @@ ul {
 
    color: black;
   }
-  
+    .hover-underline-animation {
+      display: inline-block;
+      position: relative;
+    }
+    
+    .hover-underline-animation::after {
+      content: attr(data-content);
+      position: absolute;
+      width: 500%;
+      transform: scaleX(0);
+      left: -20px;
+      transform: translateX(0);
+      transition: transform 0.5s ease-in-out;
+      font-size: 20px;
+      color: white;
+      border-radius: 3px;
+
+     /* filter: blur(5px);
+      z-index: 0;*/
+
+    }
+    
+    .hover-underline-animation:hover::after {
+      transform: translateX(50px);
+    }
+    
+    
+    .hover-underline-animation {
+      display: inline-block;
+      position: relative;
+      transition: opacity 0.25s ease-out; /* Add transition for smooth effect */
+    }
+    
+    .hover-underline-animation:hover {
+      color: black;/* Completely hide the icon */
+    }

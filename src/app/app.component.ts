@@ -11,7 +11,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 })
 export class AppComponent {
   title = 'my-first-project';
-  hoveredIcon: string | null = null; // Track the currently hovered icon
+  hoveredIcon: string | null = null;
 
   setHover(icon: string) {
     this.hoveredIcon = icon;
@@ -19,5 +19,24 @@ export class AppComponent {
 
   clearHover() {
     this.hoveredIcon = null;
+  }
+
+  getHoverContent() {
+    switch (this.hoveredIcon) {
+      case 'home':
+        return 'Home';
+      case 'about':
+        return 'About';
+      case 'project':
+        return 'Projects';
+      case 'team':
+        return 'Team';
+      case 'services':
+        return 'Services';
+      case 'contact':
+        return 'Contact';
+      default:
+        return '';
+    }
   }
 }
