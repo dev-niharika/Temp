@@ -1,0 +1,82 @@
+.video-background {
+   /* Full viewport height */
+    /* Full viewport width */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  video {
+    position: absolute;
+    top: 54%; /* Center vertically */
+    left: 75%; /* Center horizontally */
+    /* Cover the height */
+    width:50%; /* Maintain aspect ratio */
+    /* Maintain aspect ratio */
+    z-index: -1; /* Send video behind content */
+    transform: translate(-50%, -50%) rotateY(0deg); /* Center the video */
+  animation: rotate 5s infinite linear; /* Adjust for rotation */
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateY(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateY(360deg); /* Full rotation */
+  }
+}
+
+  .content {
+    position: absolute;
+    top: 60%; /* Center vertically */
+    left: 30%; /* Ensure content is above the video */
+    z-index: 1; /* Above the video */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Padding around content */
+    transform: translate(-50%, -50%) translateX(-100vw); /* Initially off-screen */
+    opacity: 0; /* Initially hidden */
+    animation: slideIn 5s ease-out forwards; /* Slide animation */
+  }
+  .content h1 {
+    font-size: 4rem; /* Increase font size of heading */
+    margin-bottom: 20px; /* Add space below heading */
+  }
+  
+  .content p {
+    font-size: 1.5rem; /* Increase font size of paragraph */
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translate(-50%, -50%) translateX(-100vw); /* Start off-screen */
+      opacity: 0; /* Hidden */
+    }
+    100% {
+      transform: translate(-50%, -50%) translateX(0); /* End at the center */
+      opacity: 1; /* Fully visible */
+    }
+  }
+
+
+  .logo img {
+    max-width: 300px; /* Adjust size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it's displayed */
+    margin: 5px auto 20px; 
+    margin: 20px auto 0; /* Center the logo and add margin below */
+    transform: scale(0); /* Start fully scaled down */
+    opacity: 0; /* Start hidden */
+    animation: zoomIn 1.5s ease-out forwards; /* Apply zoom and fade animation */
+    animation-delay: 5s; /* Delay the image animation until the content is fully visible */
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0); /* Start from 0% size */
+      opacity: 0; /* Fully transparent */
+    }
+    100% {
+      transform: scale(1); /* End at full size */
+      opacity: 1; /* Fully visible */
+    }
+  }
