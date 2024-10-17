@@ -1,8 +1,7 @@
-nav{
-    backdrop-filter: blur(10px);
-}
+   
 .hover li a:hover{
     box-shadow: rgba(93, 92, 92, 0.56) 3px 3px 3px 3px;
     border-radius: 5px;
 }
+
 
